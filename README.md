@@ -1,22 +1,58 @@
-# Vulnerability Assessment Tool
+﻿# Web Security Posture Review Dashboard
 
 ## Overview
 
-The **Vulnerability Assessment Tool** is a Node.js application designed to scan web applications for known vulnerabilities. This tool checks for outdated libraries, missing security headers, and other common vulnerabilities, providing a report that helps developers and security professionals enhance the security posture of their web applications.
+Web Security Posture Review Dashboard is a browser-based security review dashboard for presenting web application findings, remediation priorities, and readiness checkpoints.
 
-## Features
+This project is positioned as a recruiter-ready frontend portfolio piece. It upgrades a simple vulnerability assessment concept into a clearer business-facing dashboard that better fits internal security review, engineering follow-up, and stakeholder reporting workflows.
 
-- **Web Vulnerability Scanning**: Automatically scans specified URLs for potential vulnerabilities.
-- **Outdated Library Detection**: Identifies outdated versions of commonly used libraries (e.g., jQuery).
-- **Security Header Checks**: Verifies the presence of important HTTP security headers, such as:
-  - `X-Content-Type-Options`
-  - `X-Frame-Options`
-  - `X-XSS-Protection`
-- **RESTful API**: Provides a simple API endpoint for easy integration with other tools or services.
+## Real-World Business Use Case
 
-## Technologies Used
+This project maps to practical workflows used by:
 
-- **Node.js**: The runtime environment for executing JavaScript on the server side.
-- **Express**: A web framework for building the RESTful API.
-- **Axios**: For making HTTP requests to fetch web pages.
-- **Cheerio**: For parsing and querying HTML content.
+- Application Security Teams
+- Engineering Leaders
+- Internal Risk Review Workflows
+- Security Governance Teams
+- Frontend Developers Building Internal Dashboards
+
+A team may need to answer questions such as:
+
+- Which findings are highest priority?
+- Are critical security headers present or missing?
+- Which dependencies need follow-up?
+- Who owns each remediation item?
+- How can security review findings be presented more clearly to stakeholders?
+
+This dashboard is useful for security posture presentation, remediation planning, and portfolio demonstration of turning a security review concept into a more realistic internal reporting tool.
+
+## Key Features
+
+- Executive Overview Cards
+- Review Metrics
+- Security Header Review Section
+- Dependency Review Section
+- Remediation Queue With Severity Filter
+- Review Readiness Checklist
+- Responsive Browser-Based UI
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+
+## Repository Contents
+
+- `index.html`
+- `styles.css`
+- `script.js`
+- `README.md`
+- `Main.javascript`
+
+## How To Run
+
+Open the dashboard in a browser.
+
+```powershell
+Start-Process .\index.html

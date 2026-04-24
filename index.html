@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security Posture Review Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-inner">
+            <p class="eyebrow">Security Review Dashboard</p>
+            <h1>Web Security Posture Review Dashboard</h1>
+            <p class="hero-text">
+                Browser-based dashboard for presenting web application security review findings, prioritizing remediation work, and tracking readiness across headers, dependencies, and application controls.
+            </p>
+            <div class="hero-actions">
+                <button onclick="scrollToSection('overview')">View Overview</button>
+                <button onclick="scrollToSection('findings')">View Findings</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="panel" id="overview">
+            <h2>Executive Overview</h2>
+            <div class="summary-grid" id="summaryGrid"></div>
+        </section>
+
+        <section class="panel" id="metrics">
+            <h2>Review Metrics</h2>
+            <div class="metric-grid">
+                <article class="metric-card">
+                    <h3>Critical</h3>
+                    <p id="criticalCount">0</p>
+                </article>
+                <article class="metric-card">
+                    <h3>High</h3>
+                    <p id="highCount">0</p>
+                </article>
+                <article class="metric-card">
+                    <h3>Medium</h3>
+                    <p id="mediumCount">0</p>
+                </article>
+                <article class="metric-card">
+                    <h3>Low</h3>
+                    <p id="lowCount">0</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel" id="headers">
+            <h2>Security Header Review</h2>
+            <div class="card-grid" id="headerGrid"></div>
+        </section>
+
+        <section class="panel" id="dependencies">
+            <h2>Dependency Review</h2>
+            <div class="card-grid" id="dependencyGrid"></div>
+        </section>
+
+        <section class="panel" id="findings">
+            <div class="board-header">
+                <h2>Remediation Queue</h2>
+                <select id="severityFilter">
+                    <option value="All">All Severities</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="card-grid" id="findingGrid"></div>
+        </section>
+
+        <section class="panel" id="readiness">
+            <h2>Review Readiness Checklist</h2>
+            <div class="checklist-grid">
+                <article class="check-card">
+                    <h3>Scope And Discovery</h3>
+                    <ul>
+                        <li>Target Review Scope Confirmed</li>
+                        <li>Application Owner Identified</li>
+                        <li>Review Evidence Collected</li>
+                        <li>Risk Rating Method Selected</li>
+                    </ul>
+                </article>
+                <article class="check-card">
+                    <h3>Findings And Reporting</h3>
+                    <ul>
+                        <li>Security Header Review Completed</li>
+                        <li>Dependency Risks Reviewed</li>
+                        <li>Priority Findings Documented</li>
+                        <li>Stakeholder Summary Prepared</li>
+                    </ul>
+                </article>
+                <article class="check-card">
+                    <h3>Remediation Planning</h3>
+                    <ul>
+                        <li>Owners Assigned To Findings</li>
+                        <li>Deadlines Proposed</li>
+                        <li>Validation Criteria Defined</li>
+                        <li>Follow-Up Review Scheduled</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Web Security Posture Review Dashboard • Portfolio Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

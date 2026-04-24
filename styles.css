@@ -1,0 +1,217 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    padding: 56px 24px;
+}
+
+.hero-inner {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    font-size: 2.7rem;
+}
+
+.hero-text {
+    max-width: 780px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-actions button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: white;
+    color: #1d4ed8;
+}
+
+.hero-actions button:hover {
+    background: #dbeafe;
+}
+
+.page-shell {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+}
+
+.panel {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+.summary-grid,
+.metric-grid,
+.card-grid,
+.checklist-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.summary-grid,
+.metric-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.checklist-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.summary-card,
+.metric-card,
+.card,
+.check-card {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.summary-card h3,
+.metric-card h3,
+.card h3,
+.check-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1d4ed8;
+}
+
+.summary-card p,
+.card p,
+.check-card p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.metric-card p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.check-card ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+.status-tag,
+.severity-tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.status-Present {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-Missing {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.severity-Critical {
+    background: #7f1d1d;
+    color: white;
+}
+
+.severity-High {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.severity-Medium {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.severity-Low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.board-header select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+.empty-state {
+    color: #64748b;
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
