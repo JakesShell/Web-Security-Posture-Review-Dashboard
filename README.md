@@ -6,6 +6,15 @@ AegisLens is a full-stack web security posture review console designed for cloud
 
 The original project was a static browser dashboard. This upgraded version adds a working Express backend, scanner API, security-header scoring engine, demo target fixtures, runtime scan history, remediation logic, automated tests, Docker readiness, and a polished cloud-operations interface.
 
+## Screenshots
+
+### Dashboard Overview
+
+![AegisLens dashboard overview](docs/screenshots/aegislens-dashboard-overview.png)
+
+### Backend Health Endpoint
+
+![AegisLens API health endpoint](docs/screenshots/aegislens-api-health.png)
 ## Real-World Use Case
 
 A cloud support or application security team may need to review a customer-facing web application before launch, migration, or production release.
@@ -67,3 +76,4 @@ AegisLens helps answer:
 ├── Dockerfile
 ├── .env.example
 └── README.md
+
