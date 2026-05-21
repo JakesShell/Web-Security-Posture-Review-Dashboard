@@ -1,58 +1,69 @@
-﻿# Web Security Posture Review Dashboard
+﻿# AegisLens Web Security Posture & Remediation Console
 
 ## Overview
 
-Web Security Posture Review Dashboard is a browser-based security review dashboard for presenting web application findings, remediation priorities, and readiness checkpoints.
+AegisLens is a full-stack web security posture review console designed for cloud support, application security, and launch-readiness workflows.
 
-This project is positioned as a recruiter-ready frontend portfolio piece. It upgrades a simple vulnerability assessment concept into a clearer business-facing dashboard that better fits internal security review, engineering follow-up, and stakeholder reporting workflows.
+The original project was a static browser dashboard. This upgraded version adds a working Express backend, scanner API, security-header scoring engine, demo target fixtures, runtime scan history, remediation logic, automated tests, Docker readiness, and a polished cloud-operations interface.
 
-## Real-World Business Use Case
+## Real-World Use Case
 
-This project maps to practical workflows used by:
+A cloud support or application security team may need to review a customer-facing web application before launch, migration, or production release.
 
-- Application Security Teams
-- Engineering Leaders
-- Internal Risk Review Workflows
-- Security Governance Teams
-- Frontend Developers Building Internal Dashboards
+AegisLens helps answer:
 
-A team may need to answer questions such as:
-
-- Which findings are highest priority?
-- Are critical security headers present or missing?
-- Which dependencies need follow-up?
-- Who owns each remediation item?
-- How can security review findings be presented more clearly to stakeholders?
-
-This dashboard is useful for security posture presentation, remediation planning, and portfolio demonstration of turning a security review concept into a more realistic internal reporting tool.
+- Are important browser security headers present?
+- Is HTTPS posture acceptable?
+- Are cookies missing Secure, HttpOnly, or SameSite protections?
+- Is the app exposing server or framework details?
+- Which remediation tasks should be escalated first?
+- What should cloud support, platform, and application teams fix before release?
 
 ## Key Features
 
-- Executive Overview Cards
-- Review Metrics
-- Security Header Review Section
-- Dependency Review Section
-- Remediation Queue With Severity Filter
-- Review Readiness Checklist
-- Responsive Browser-Based UI
+- Full-stack Node.js and Express application
+- Frontend dashboard served from the backend
+- Safe URL scanning API
+- Demo target profiles for portfolio review
+- Security header scoring engine
+- Grade and score calculation
+- Remediation queue with severity and ownership
+- Runtime scan history
+- API health endpoint
+- Automated scanner tests
+- Dockerfile for container readiness
+- Cloud support focused documentation
 
 ## Tech Stack
 
+- Node.js
+- Express
+- JavaScript ES Modules
 - HTML
 - CSS
-- JavaScript
+- Browser Fetch API
+- Helmet
+- CORS
+- Docker
 
-## Repository Contents
+## Project Structure
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `README.md`
-- `Main.javascript`
-
-## How To Run
-
-Open the dashboard in a browser.
-
-```powershell
-Start-Process .\index.html
+```text
+.
+├── public/
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
+├── src/
+│   ├── scanner.mjs
+│   └── data/
+│       └── demoTargets.mjs
+├── tests/
+│   └── scanner.test.mjs
+├── docs/
+│   └── architecture.md
+├── server.mjs
+├── package.json
+├── Dockerfile
+├── .env.example
+└── README.md

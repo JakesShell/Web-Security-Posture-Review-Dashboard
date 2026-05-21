@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AegisLens Web Security Posture Console</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Cloud Security Operations Portfolio System</p>
+        <h1>AegisLens Web Security Posture & Remediation Console</h1>
+        <p class="hero-text">
+          Scan a web target, review browser security controls, triage missing headers,
+          and generate a remediation plan that feels like a real cloud support workflow.
+        </p>
+
+        <form id="scan-form" class="scan-panel">
+          <label for="target-input">Target URL or demo profile</label>
+          <div class="scan-row">
+            <input
+              id="target-input"
+              type="text"
+              placeholder="example.com or https://example.com"
+              value="demo:hardened-saas"
+            />
+            <button type="submit">Run Posture Scan</button>
+          </div>
+          <p class="microcopy">
+            Use only authorized targets. Demo profiles are included for safe portfolio review.
+          </p>
+        </form>
+
+        <div id="preset-buttons" class="preset-grid"></div>
+      </div>
+
+      <aside class="hero-card">
+  <div class="score-orbit">
+    <div class="orbital-ring"></div>
+
+    <div class="score-center">
+      <p class="card-label">Current Security Grade</p>
+      <div id="score-grade" class="score-grade">--</div>
+      <div id="score-value" class="score-value">Awaiting scan</div>
+    </div>
+  </div>
+
+  <p id="score-summary" class="score-summary">
+    Select a demo target or scan an authorized website to generate posture evidence.
+  </p>
+</aside>
+
+    </section>
+
+    <section class="metric-grid">
+      <article class="metric-card">
+        <span>Header Coverage</span>
+        <strong id="metric-coverage">--</strong>
+        <small>Required controls detected</small>
+      </article>
+      <article class="metric-card">
+        <span>Remediation Queue</span>
+        <strong id="metric-remediation">--</strong>
+        <small>Open hardening tasks</small>
+      </article>
+      <article class="metric-card">
+        <span>Critical / High</span>
+        <strong id="metric-priority">--</strong>
+        <small>Launch-impacting risk</small>
+      </article>
+      <article class="metric-card">
+        <span>Response Time</span>
+        <strong id="metric-latency">--</strong>
+        <small>Scanner round trip</small>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel wide">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Security Evidence</p>
+            <h2>Header Control Review</h2>
+          </div>
+          <span id="scan-mode" class="status-pill">No scan yet</span>
+        </div>
+        <div id="findings-list" class="findings-list empty-state">
+          Run a scan to review CSP, HSTS, clickjacking protection, MIME sniffing protection, permissions policy, cookie attributes, and exposure signals.
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Action Queue</p>
+            <h2>Remediation Plan</h2>
+          </div>
+        </div>
+        <div id="remediation-list" class="remediation-list empty-state">
+          Remediation tasks will appear here after the scanner evaluates the target.
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Cloud Workflow</p>
+            <h2>Operational Recommendations</h2>
+          </div>
+        </div>
+        <div id="cloud-list" class="cloud-list empty-state">
+          Cloud support recommendations will appear after the first scan.
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Runtime Memory</p>
+            <h2>Recent Scans</h2>
+          </div>
+          <button id="refresh-history" class="secondary-button" type="button">Refresh</button>
+        </div>
+        <div id="history-list" class="history-list empty-state">
+          No scans have been run in this server session yet.
+        </div>
+      </article>
+    </section>
+
+    <section class="cta-panel">
+      <div>
+        <p class="eyebrow">Recruiter Review Moment</p>
+        <h2>Built like an internal launch-readiness console</h2>
+        <p>
+          This project now shows frontend polish, backend API design, security scoring logic,
+          cloud support thinking, safe target validation, tests, and deployment readiness.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <button id="copy-report" type="button">Copy Current JSON Report</button>
+        <a href="/api/health" target="_blank" rel="noreferrer">View API Health</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
+
+
